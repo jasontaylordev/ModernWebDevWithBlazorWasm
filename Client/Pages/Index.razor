@@ -1,0 +1,98 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<div class="container">
+
+	<div id="carouselGettingStarted" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#carouselGettingStarted" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#carouselGettingStarted" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#carouselGettingStarted" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		</div>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="/images/banner1.svg" class="d-block w-100" alt="ASP.NET" />
+				<div class="carousel-caption" role="option">
+					<p>
+						Learn how to build ASP.NET apps that can run anywhere.
+						<a class="btn btn-light" role="button" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
+							Learn More
+						</a>
+					</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="/images/banner2.svg" class="d-block w-100" alt="Visual Studio" />
+				<div class="carousel-caption" role="option">
+					<p>
+						There are powerful new features in Visual Studio for building modern web apps.
+						<a class="btn btn-light" role="button" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
+							Learn More
+						</a>
+					</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="/images/banner3.svg" class="d-block w-100" alt="Microsoft Azure" />
+				<div class="carousel-caption" role="option">
+					<p>
+						Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
+						<a class="btn btn-light" role="button" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
+							Learn More
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselGettingStarted" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselGettingStarted" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
+
+	<div class="row">
+		<div class="col-md-3">
+			<h2>Application uses</h2>
+			<ul>
+				<li>Sample pages using Blazor</li>
+				<li>Theming using <a href="https://getbootstrap.com/">Bootstrap</a></li>
+				<li>Icons using <a href="http://useiconic.com/open">Open Iconic</a></li>
+				<li>Open API using <a href="http://useiconic.com/open">NSwag</a></li>
+				<li>Validation using <a href="https://fluentvalidation.net/">FluentValidation</a></li>
+				<li>Data access using <a href="https://docs.microsoft.com/en-us/ef/core/">EF Core</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3">
+			<h2>Resources</h2>
+			<ul>
+				<li><a href="http://blazor.net/">Building web apps with Blazor</a></li>
+				<li><a href="https://docs.microsoft.com/en-gb/aspnet/core/blazor/?view=aspnetcore-6.0">Blazor on ASP.NET Blog</a></li>
+				<li><a href="https://www.packtpub.com/product/blazor-webassembly-by-example/9781800567511">Blazor WebAssembly by Example</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3">
+			<h2>Training</h2>
+			<ul>
+				<li><a href="https://docs.microsoft.com/en-gb/learn/browse/?terms=blazor">Blazor courses on Microsoft Learn</a></li>
+				<li><a href="https://www.blazortrain.com/">Carl Franklin's Blazor Train</a></li>
+				<li><a href="https://github.com/dotnet-presentations/blazor-workshop">Blazor app building Workshop </a></li>
+			</ul>
+		</div>
+		<div class="col-md-3">
+			<h2>Packages</h2>
+			<ul>
+				<li><a href="https://github.com/aladotnet/BlazoriseFluentValidation">Blazorize FluentValidation</a></li>
+				<li><a href="https://github.com/jsakamoto/Toolbelt.Blazor.LoadingBar">Toolbelt Blazor LoadingBar</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<p>For everything else visit: <a href="https://github.com/AdrienTorris/awesome-blazor">Awesome Blazor</a> <a href="https://awesome.re" rel="nofollow"><img src="https://camo.githubusercontent.com/5d0405ddcbeac98b5806832e6254a0a102e09b47637c2ddec9a8094cb2257b31/68747470733a2f2f617765736f6d652e72652f62616467652d666c6174322e737667" alt="Awesome" data-canonical-src="https://awesome.re/badge-flat2.svg" style="max-width: 100%;"></a></p>
+
+	<SurveyPrompt Title="How is Blazor working for you?" />
+</div>

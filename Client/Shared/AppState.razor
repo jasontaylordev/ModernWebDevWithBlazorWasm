@@ -1,0 +1,34 @@
+﻿@inject IJSInProcessRuntime JS
+
+<CascadingValue Value=this>
+    @ChildContent
+</CascadingValue>
+
+@code {
+	[Parameter] public RenderFragment ChildContent { get; set; }
+
+	private int _currentCount;
+
+	public int CurrentCount 
+	{
+		get 
+		{ 
+			return _currentCount; 
+		}
+		set
+		{
+			_currentCount = value;
+
+			JS.InvokeVoid(JsInteropConstants.SetSessionStorage, nameof(CurrentCount), value);
+
+			StateHasChanged();
+		}
+	}
+
+	protected override void OnInitialized()
+	{
+		var value = JS.Invoke<string>(JsInteropConstants.GetSessionStorage, nameof(CurrentCount));
+
+		int.TryParse(value, out _currentCount);
+	}
+}
