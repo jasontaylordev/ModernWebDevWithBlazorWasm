@@ -28,9 +28,14 @@ builder.Services.AddValidatorsFromAssemblyContaining<TodoListValidator>();
 
 builder.Services.AddScoped<SessionStorageService>();
 
-builder.Services.AddScoped<IWeatherClient, WeatherClient>();
-builder.Services.AddScoped<ITodoListsClient, TodoListsClient>();
-builder.Services.AddScoped<ITodoItemsClient, TodoItemsClient>();
+//builder.Services.AddScoped<IWeatherClient, WeatherClient>();
+//builder.Services.AddScoped<ITodoListsClient, TodoListsClient>();
+//builder.Services.AddScoped<ITodoItemsClient, TodoItemsClient>();
+
+builder.Services.Scan(scan => scan
+    .FromAssemblyOf<IWeatherClient>()
+    .AddClasses().AsImplementedInterfaces()
+    .WithScopedLifetime());
 
 builder.UseLoadingBar();
 
