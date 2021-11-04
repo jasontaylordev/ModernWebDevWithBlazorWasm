@@ -1,6 +1,4 @@
 ﻿@page "/weather"
-@using BlazorDemo.Shared
-@inject IWeatherClient Client
 
 <PageTitle>Weather</PageTitle>
 
@@ -35,13 +33,4 @@ else
             }
         </tbody>
     </table>
-}
-
-@code {
-    private ICollection<WeatherForecast> forecasts;
-
-    protected override async Task OnInitializedAsync()
-    {
-        forecasts = await Client.GetAsync();
-    }
 }

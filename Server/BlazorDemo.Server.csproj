@@ -30,17 +30,17 @@
     <Folder Include="wwwroot\api\v1\" />
   </ItemGroup>
 
-  <PropertyGroup>
-    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-  </PropertyGroup>
+<PropertyGroup>
+  <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+</PropertyGroup>
 
-  <Target Name="NSwag" AfterTargets="PostBuildEvent" Condition=" '$(Configuration)' == 'Debug' ">
-    <Message Importance="High" Text="$(NSwagExe_Net50) run /variables:Configuration=$(Configuration)" />
+<Target Name="NSwag" AfterTargets="PostBuildEvent" Condition=" '$(Configuration)' == 'Debug' ">
+  <Message Importance="High" Text="$(NSwagExe_Net50) run /variables:Configuration=$(Configuration)" />
 
-    <Exec WorkingDirectory="$(ProjectDir)" EnvironmentVariables="ASPNETCORE_ENVIRONMENT=Development" Command="$(NSwagExe_Net50) run /variables:Configuration=$(Configuration)" />
+  <Exec WorkingDirectory="$(ProjectDir)" EnvironmentVariables="ASPNETCORE_ENVIRONMENT=Development" Command="$(NSwagExe_Net50) run /variables:Configuration=$(Configuration)" />
 
-    <!-- Avoids accidently triggering an additional project rebuild. -->
-    <Delete Files="$(ProjectDir)\obj\$(MSBuildProjectFile).NSwag.targets" />
-  </Target>
+  <!-- Avoids accidently triggering an additional project rebuild. -->
+  <Delete Files="$(ProjectDir)\obj\$(MSBuildProjectFile).NSwag.targets" />
+</Target>
 
 </Project>

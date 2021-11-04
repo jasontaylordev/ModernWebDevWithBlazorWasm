@@ -25,7 +25,6 @@
 			</div>
 			<EditForm Model="@_newTodoList" OnValidSubmit="@CreateNewList">
 				<div class="modal-body">
-
 					<FluentValidationValidator DisableAssemblyScanning="true" />
 					<CustomValidation @ref="_customValidation" />
 
